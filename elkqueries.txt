@@ -8,4 +8,4 @@ POST /bookdb_index/book/_bulk
     { "index": { "_id": 4 }}
     { "title": "Solr in Action", "authors": ["trey grainger", "timothy potter"], "summary" : "Comprehensive guide to implementing a scalable search engine using Apache Solr", "publish_date" : "2014-04-05", "num_reviews": 23, "publisher": "manning" }
 ==========================================================================================
-Curl –H “Content-Type: application/x-ndjson” –XPOST “localhost:9200/receipe/doc/_bulk?pretty” –data-binary @test-data.json
+Curl –H "Content-Type: application/x-ndjson" –XPOST "localhost:9200/receipe/doc/_bulk?pretty" -–data-binary @test-data.json
