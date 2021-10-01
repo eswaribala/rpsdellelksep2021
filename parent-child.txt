@@ -1,4 +1,4 @@
-PUT my-index-000001
+PUT rps-index-0001
 {
   "mappings": {
     "properties": {
@@ -15,7 +15,7 @@ PUT my-index-000001
   }
 }
 
-PUT my-index-000001/_doc/1?refresh
+PUT rps-index-0001/_doc/1?refresh
 {
   "my_id": "1",
   "text": "This is a question",
@@ -24,7 +24,7 @@ PUT my-index-000001/_doc/1?refresh
   }
 }
 
-PUT my-index-000001/_doc/2?refresh
+PUT rps-index-0001/_doc/2?refresh
 {
   "my_id": "2",
   "text": "This is another question",
@@ -33,21 +33,8 @@ PUT my-index-000001/_doc/2?refresh
   }
 }
 
-PUT my-index-000001/_doc/1?refresh
-{
-  "my_id": "1",
-  "text": "This is a question",
-  "my_join_field": "question" 
-}
 
-PUT my-index-000001/_doc/2?refresh
-{
-  "my_id": "2",
-  "text": "This is another question",
-  "my_join_field": "question"
-}
-
-PUT my-index-000001/_doc/3?routing=1&refresh 
+PUT rps-index-0001/_doc/3?routing=1&refresh 
 {
   "my_id": "3",
   "text": "This is an answer",
@@ -57,7 +44,7 @@ PUT my-index-000001/_doc/3?routing=1&refresh
   }
 }
 
-PUT my-index-000001/_doc/4?routing=1&refresh
+PUT rps-index-0001/_doc/4?routing=1&refresh
 {
   "my_id": "4",
   "text": "This is another answer",
@@ -66,4 +53,3 @@ PUT my-index-000001/_doc/4?routing=1&refresh
     "parent": "1"
   }
 }
-
