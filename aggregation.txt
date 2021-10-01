@@ -154,3 +154,17 @@ GET /order/_search
     }
   }
 }
+
+//bucket query
+
+GET /order/_search
+{
+  "size": 0,
+  "aggs": {
+    "status_terms": {
+      "terms": {
+        "field": "status"
+      }
+    }
+  }
+}
