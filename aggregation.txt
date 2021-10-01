@@ -168,3 +168,16 @@ GET /order/_search
     }
   }
 }
+
+GET /order/_search
+{
+  "size": 0,
+  "aggs": {
+    "amount_distribution": {
+      "histogram": {
+        "field": "total_amount",
+        "interval": 25
+      }
+    }
+  }
+}
